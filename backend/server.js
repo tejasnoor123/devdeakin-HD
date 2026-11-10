@@ -48,7 +48,16 @@ app.use(express.json());
 // FIREBASE ADMIN INITIALIZATION
 // ==========================================
 
-const serviceAccount = require("./serviceAccountKey.json");
+const fs = require("fs");
+const path = require("path");
+
+const renderSecretPath = "/etc/secrets/serviceAccountKey.json";
+
+const serviceAccountPath = fs.existsSync(renderSecretPath)
+    ? renderSecretPath
+    : path.join(__dirname, "serviceAccountKey.json");
+
+const serviceAccount = require(serviceAccountPath);
 
 if (!admin.apps.length) {
     admin.initializeApp({

@@ -49,7 +49,7 @@ app.use(express.json());
 // ==========================================
 
 const fs = require("fs");
-const path = require("path");
+
 
 const renderSecretPath = "/etc/secrets/serviceAccountKey.json";
 

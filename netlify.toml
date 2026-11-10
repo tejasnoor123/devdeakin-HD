@@ -8,12 +8,13 @@
   node_bundler = "esbuild"
 
 # Send API requests to the new D2 Render backend
+# Send API requests to the new Render backend
 [[redirects]]
   from = "/api/*"
-  to = "https://task-d2-backend.onrender.com/:splat"
+  to = "https://devdeakin-backend-new.onrender.com/api/:splat"
   status = 200
   force = true
-
+  
 # Single Page Application (SPA) fallback for React Router
 [[redirects]]
   from = "/*"

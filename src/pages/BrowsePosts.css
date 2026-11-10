@@ -1,0 +1,162 @@
+.browse-posts {
+  max-width: 1100px;
+  min-height: 400px;
+  margin: 35px auto;
+  padding: 25px;
+}
+
+.browse-posts h1 {
+  margin-bottom: 10px;
+}
+
+.post-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 15px;
+  margin: 25px 0;
+  padding: 20px;
+  background: #f5f7f8;
+  border-radius: 8px;
+}
+
+.post-filters label {
+  display: flex;
+  flex: 1 1 160px;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 150px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post-filters .search-field {
+  flex: 2 1 280px;
+}
+
+.post-filters input,
+.post-filters select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-weight: 400;
+}
+
+.post-filters input:focus,
+.post-filters select:focus {
+  outline: none;
+  border-color: #079b9b;
+  box-shadow: 0 0 0 3px rgba(7, 155, 155, 0.13);
+}
+
+.post-filters button,
+.post-card-actions button {
+  padding: 10px 16px;
+  min-height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #079b9b;
+  color: white;
+  font: inherit;
+}
+
+.post-filters button:hover,
+.post-card-actions button:hover {
+  background: #067f7f;
+}
+
+.posts-result-count {
+  margin: 0 0 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.no-posts-message {
+  padding: 18px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  color: #666;
+  text-align: center;
+}
+
+.posts-list {
+  display: grid;
+  gap: 20px;
+}
+
+.browse-post-card {
+  padding: 22px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.post-card-heading,
+.post-card-actions,
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.post-card-heading span,
+.post-tags span {
+  padding: 5px 10px;
+  background: #e5f5f5;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.post-author,
+.post-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.post-tags {
+  justify-content: flex-start;
+  margin: 15px 0;
+}
+
+.post-card-actions {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.browse-error {
+  color: #c62828;
+}
+
+@media (max-width: 600px) {
+  .browse-posts {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .post-filters {
+    align-items: stretch;
+    padding: 15px;
+  }
+
+  .post-filters label,
+  .post-filters .search-field {
+    flex-basis: 100%;
+  }
+
+  .post-filters button {
+    width: 100%;
+  }
+
+  .browse-post-card {
+    padding: 16px;
+  }
+}
